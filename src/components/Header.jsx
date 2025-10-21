@@ -1,4 +1,5 @@
 
+// importing icons
 import { MdHome } from "react-icons/md";
 import { SiWikibooks } from "react-icons/si";
 import { BiSolidBookAdd } from "react-icons/bi";
@@ -20,7 +21,7 @@ function Header(){
 
                 <div>
 
-                        <ul className=' p-1 list-none flex justify-evenly  gap-4 flex-wrap lg:gap-8 text-[1.5rem] font-semibold  ' >
+                        <ul className=' p-1 list-none flex justify-evenly  gap-4 flex-wrap lg:gap-8 text-[1.3rem] font-semibold  ' >
 
                             <li >
                                 <MdHome />

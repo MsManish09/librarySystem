@@ -12,7 +12,7 @@ function Header(){
     return(
 
         <header className="sticky top-0 z-50 border-b border-blue-200"  >
-            <nav className=" flex flex-col bg-blue-50 p-2 flex-wrap justify-evenly items-center sm:flex-row gap-3 text-blue-900 " >
+            <nav className=" flex flex-col bg-[rgba(255,255,255,0.2)]  p-2 flex-wrap justify-evenly items-center sm:flex-row gap-3 text-[#FAFAD2] " >
 
                 <div className=" flex gap-2 justify-center items-center   hover:scale-95 hover:text-blue-700  " >
                     <img src="src\utils\library_system_logo.png" alt="site logo" height='50px' width='75px' />

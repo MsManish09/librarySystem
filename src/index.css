@@ -12,6 +12,7 @@ li{
     border-radius: 5px;
     padding: 6px 4px ;
     transition: all 0.5s ;
+    gap: .2rem;
 }
 
 li:hover{

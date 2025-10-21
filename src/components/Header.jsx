@@ -18,9 +18,9 @@ function Header(){
                     <span className=' font-semibold text-[1.7rem]  ' >ILLUMINA</span>
                 </div>
 
-                < div className="flex flex-col flex-wrap gap-2 justify-evenly p-1 text-[1.5rem] font-semibold  sm:flex-row  ">
+                <div>
 
-                        <ul className=' list-none flex gap-4 flex-wrap lg:gap-8 ' >
+                        <ul className=' p-1 list-none flex justify-evenly  gap-4 flex-wrap lg:gap-8 text-[1.5rem] font-semibold  ' >
 
                             <li >
                                 <MdHome />

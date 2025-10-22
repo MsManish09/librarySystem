@@ -2,7 +2,7 @@
 function BookCard({book}){
 
     return(
-        <div className=" flex p-2 justify-evenly items-center rounded-[15px] w-[280px] h-[300px] hover:scale-95 bg-amber-100 " >
+        <div className=" flex p-2 justify-evenly items-center rounded-[15px] w-[100%] h-[300px] hover:scale-95 bg-amber-100 " >
 
             <div className=" w-[50%] h-full  flex justify-center items-center   " >
                 <img src={book.image} alt={`${book.title} cover image`} className=" w-[100px] h-[125px] rounded-[15px] " />

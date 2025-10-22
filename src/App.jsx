@@ -1,6 +1,7 @@
 import BrowseBooks from "./components/BrowseBooks"
 import Header from "./components/Header"
 import HomeBody from "./components/HomeBody"
+import NewBrowseBooks from "./components/NewBrowseBooks"
 
 function App(){
 
@@ -9,7 +10,8 @@ function App(){
       {/* <h1>App</h1> */}
       {/* <Header />
       <HomeBody /> */}
-      <BrowseBooks />
+      {/* <BrowseBooks /> */}
+      <NewBrowseBooks />
     </div>
   )
 }

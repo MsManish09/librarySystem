@@ -22,3 +22,6 @@ li:hover{
 
 }
 
+.scrollbarHidden::-webkit-scrollbar{
+    display: none;
+}

@@ -12,9 +12,9 @@ function Header(){
     return(
 
         <header className="sticky top-0 z-50 border-b border-blue-200"  >
-            <nav className=" flex flex-col bg-[rgba(255,255,255,0.2)]  p-2 flex-wrap justify-evenly items-center sm:flex-row gap-3 text-[#FAFAD2] " >
+            <nav className=" flex flex-col bg-[rgba(255,255,255,0.5)]  p-2 flex-wrap justify-evenly items-center sm:flex-row gap-3 text-yellow-400 " >
 
-                <div className=" flex gap-2 justify-center items-center   hover:scale-95 hover:text-blue-700  " >
+                <div className=" flex justify-center items-center  pl-1 pr-2  hover:scale-95 hover:text-blue-700  " >
                     <img src="src\utils\library_system_logo.png" alt="site logo" height='50px' width='75px' />
                     <span className=' font-semibold text-[1.7rem]  ' >ILLUMINA</span>
                 </div>

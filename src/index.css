@@ -25,3 +25,39 @@ li:hover{
 .scrollbarHidden::-webkit-scrollbar{
     display: none;
 }
+
+form{
+    background-color: rgba(219, 234, 254, .9);
+;
+}
+
+.inputContainer{
+    display:flex;
+    flex-direction: column;
+    width:auto;
+    color: #1F2937;
+    gap: 2px;
+}
+
+.inputContainer > label{
+    font-size: large;
+    font-weight: 700;
+}
+
+.addBookInputField{
+
+    background-color: white;
+    border-radius: 5px;
+    /* width: 50%; */
+    /* color: #1F2937; */
+    padding: 2px;
+    padding-left: 6px;
+    margin-left: 4px;
+    margin-bottom: 2px;
+}
+
+
+
+
+
+

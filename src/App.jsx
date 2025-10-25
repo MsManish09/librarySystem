@@ -1,3 +1,4 @@
+import AddBook from "./components/AddBook"
 import BrowseBooks from "./components/BrowseBooks"
 import Header from "./components/Header"
 import HomeBody from "./components/HomeBody"
@@ -11,7 +12,8 @@ function App(){
       {/* <Header />
       <HomeBody /> */}
       {/* <BrowseBooks /> */}
-      <NewBrowseBooks />
+      {/* <NewBrowseBooks /> */}
+      <AddBook />
     </div>
   )
 }

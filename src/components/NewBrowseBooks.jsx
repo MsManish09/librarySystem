@@ -25,18 +25,24 @@ function NewBrowseBooks() {
     })
   }
 
+  // create a state to change color of active categgory button
+  const [activeCategory, setActiveCategory] = useState('all')
+
   // filter functinality based on ca tegory.
   function handlefilter(e){
 
     console.log(e.target.name)
+    setActiveCategory(e.target.name)
 
-    if(e.target.name === 'all'){
+    if(e.target.name == 'all'){
       return setBooks(bookData)
     }
 
-    setBooks(()=>{
-      return bookData.filter((book)=> book.category === e.target.name )
-    })
+    else{
+      setBooks(()=>{
+        return bookData.filter((book)=> book.category === e.target.name )
+      })
+    } 
   }
 
   return (
@@ -73,11 +79,11 @@ function NewBrowseBooks() {
             {/* dynamically create category buttons */}
             <div id="categoryFilter" className=" flex gap-2 flex-wrap justify-center items-center p-4 " >
 
-              <button name='all' onClick={handlefilter} className=" p-2 bg-gray-700 text-white rounded-[15px] hover:scale-95 border-1 border-solid border-gray-300 " >All</button>
+              <button name='all' onClick={handlefilter} className={` p-2 text-white rounded-[15px] hover:scale-95 border-1 border-solid  ${activeCategory === 'all' ? 'bg-blue-700 text-yellow-400 border-yellow-300' : 'bg-gray-700 border-gray-300 '} `} >All</button>
 
               { categories.map((c)=>{
                 return(
-                  <button name={c.name} onClick={handlefilter} className=" p-2 bg-gray-700 text-white rounded-[15px] hover:scale-95 border-1 border-solid border-gray-300 " > {c.name} </button>
+                  <button name={c.name} onClick={handlefilter} className={` p-2 text-white rounded-[15px] hover:scale-95 border-1 border-solid border-gray-300 ${activeCategory === c.name ? 'bg-blue-700 text-yellow-400 border-yellow-300 ' : 'bg-gray-700 border-gray-300 '} `} > {c.name} </button>
                 )
               }) }
             </div>

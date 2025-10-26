@@ -12,7 +12,7 @@ function NewBrowseBooks() {
       <div className="p-4 flex flex-col lg:flex-row justify-evenly items-start gap-6">
 
         {/* Popular Books Section */}
-        <section className=" bg-[rgba(255,255,255,0.5)] rounded-2xl p-4 w-full lg:w-[25%] flex flex-col items-center gap-4 ">
+        <section className=" bg-[rgba(255,255,255,0.5)] rounded-2xl p-4 w-full lg:w-[25%] flex flex-col items-center gap-4 border-2 border-solid border-gray-100 ">
           <h3 className="text-2xl font-semibold underline text-yellow-500">
             Popular Books
           </h3>
@@ -29,7 +29,7 @@ function NewBrowseBooks() {
         </section>
 
         {/* Browse Books Section */}
-        <section className=" bg-[rgba(255,255,255,0.5)] rounded-2xl p-4 w-full lg:w-[70%] flex flex-col items-center gap-4">
+        <section className=" bg-[rgba(255,255,255,0.5)] rounded-2xl p-4 w-full lg:w-[70%] flex flex-col items-center gap-4 border-2 border-solid border-gray-100 ">
           <h3 className="text-2xl font-semibold text-blue-700 underline">
             Browse Books
           </h3>

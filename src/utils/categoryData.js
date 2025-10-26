@@ -5,11 +5,11 @@ export const categories = [
     imageUrl: "/src/utils/frictionCategory.webp"
   },
   {
-    name: "Sci‑Fi",
+    name: "SciFi",
     imageUrl: "src/utils/sci_fi.webp"
   },
   {
-    name: "Non‑Fiction",
+    name: "Non Fiction",
     imageUrl: "src/utils/non_friction.webp"
   },
   {
@@ -37,7 +37,7 @@ export const categories = [
     imageUrl: "src/utils/Fantasy.webp"
   },
   {
-    name: "Self‑Help",
+    name: "Self Help",
     imageUrl: "src/utils/self_help.webp"
   }
 ];

@@ -12,8 +12,8 @@ function App(){
       {/* <Header />
       <HomeBody /> */}
       {/* <BrowseBooks /> */}
-      {/* <NewBrowseBooks /> */}
-      <AddBook />
+      <NewBrowseBooks />
+      {/* <AddBook /> */}
     </div>
   )
 }

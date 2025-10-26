@@ -1,7 +1,10 @@
 import BookCard from "./BookCard";
 import Header from "./Header";
 import useBookData from "../utils/useBookData";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+// import category data
+import { categories } from "../utils/categoryData"; 
 
 function NewBrowseBooks() {
   const { bookData } = useBookData();
@@ -22,7 +25,19 @@ function NewBrowseBooks() {
     })
   }
 
+  // filter functinality based on ca tegory.
+  function handlefilter(e){
 
+    console.log(e.target.name)
+
+    if(e.target.name === 'all'){
+      return setBooks(bookData)
+    }
+
+    setBooks(()=>{
+      return bookData.filter((book)=> book.category === e.target.name )
+    })
+  }
 
   return (
     <div>
@@ -54,8 +69,21 @@ function NewBrowseBooks() {
 
           <div id="searchAndFilterContainer">
             <input type="text" onChange={handleSearch} />
+
+            {/* dynamically create category buttons */}
+            <div id="categoryFilter" className=" flex gap-2 flex-wrap justify-center items-center p-4 " >
+
+              <button name='all' onClick={handlefilter} className=" p-2 bg-gray-700 text-white rounded-[15px] hover:scale-95 border-1 border-solid border-gray-300 " >All</button>
+
+              { categories.map((c)=>{
+                return(
+                  <button name={c.name} onClick={handlefilter} className=" p-2 bg-gray-700 text-white rounded-[15px] hover:scale-95 border-1 border-solid border-gray-300 " > {c.name} </button>
+                )
+              }) }
+            </div>
           </div>
 
+          {/* rendering books */}
           <div className="flex flex-wrap justify-center gap-4 w-full">
 
             {books.map((book, index) => (

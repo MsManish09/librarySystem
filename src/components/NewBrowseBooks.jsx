@@ -1,10 +1,28 @@
 import BookCard from "./BookCard";
 import Header from "./Header";
 import useBookData from "../utils/useBookData";
+import { useState } from "react";
 
 function NewBrowseBooks() {
   const { bookData } = useBookData();
   const popularBook = bookData.filter((book) => book.rating >= 4.8);
+
+  // create a state to update ui
+  const [books, setBooks] = useState(bookData)
+
+  // update ui everytime original books list changes.
+  useEffect(() => {
+    setBooks(bookData);
+  }, [bookData]);
+
+  // search functionality
+  function handleSearch(e){
+    setBooks(()=>{
+      return bookData.filter((book)=> book.title.toLowerCase().includes(e.target.value.toLowerCase()) )
+    })
+  }
+
+
 
   return (
     <div>
@@ -34,9 +52,13 @@ function NewBrowseBooks() {
             Browse Books
           </h3>
 
+          <div id="searchAndFilterContainer">
+            <input type="text" onChange={handleSearch} />
+          </div>
+
           <div className="flex flex-wrap justify-center gap-4 w-full">
 
-            {bookData.map((book, index) => (
+            {books.map((book, index) => (
 
               <div key={index} className="w-full sm:w-[48%] md:w-[32%] lg:w-[32%] flex justify-center" >
                 <BookCard book={book} />

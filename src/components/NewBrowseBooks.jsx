@@ -1,12 +1,16 @@
 import BookCard from "./BookCard";
-import useBookData from "../utils/useBookData";
 import { useEffect, useState } from "react";
 
 // import category data
 import { categories } from "../utils/categoryData"; 
 
+import { useSelector } from 'react-redux';
+
+
 function NewBrowseBooks() {
-  const { bookData } = useBookData();
+
+  // get bookdata from redux
+  const bookData = useSelector((state) => state.books.bookData);
   const popularBook = bookData.filter((book) => book.rating >= 4.8);
 
   // create a state to update ui
@@ -72,8 +76,9 @@ function NewBrowseBooks() {
             Browse Books
           </h3>
 
-          <div id="searchAndFilterContainer">
-            <input type="text" onChange={handleSearch} />
+          <div id="searchAndFilterContainer" className=" flex flex-col gap-2 justify-center items-center  " >
+            
+            <input type="text" onChange={handleSearch} className=" bg-white rounded-2xl p-2  m-auto w-[50%] text-center " placeholder="Search book " />
 
             {/* dynamically create category buttons */}
             <div id="categoryFilter" className=" flex gap-2 flex-wrap justify-center items-center p-4 " >

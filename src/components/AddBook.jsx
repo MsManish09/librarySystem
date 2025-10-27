@@ -1,11 +1,21 @@
 import { useState } from "react";
 
 // import book data state
-import useBookData from "../utils/useBookData";
+// import useBookData from "../utils/useBookData"
+
+import { useDispatch, useSelector } from 'react-redux'
+import { addBook } from '../redux/bookSlice'
+
+// import navigate hook to automatically navigate to browserbook comp after adding the new book 
+import { useNavigate } from 'react-router-dom';
+
 
 function AddBook() {
 
-    const  {bookData, setBookData} = useBookData()
+    const bookData = useSelector((state) => state.books.bookData)
+    const dispatch = useDispatch();
+
+    const navigate = useNavigate()
 
     // state to hold new book data
     const [formData, setFormData] = useState({
@@ -51,15 +61,10 @@ function AddBook() {
         // check number of books beforring adding the new book.
         console.log( "before :  ", bookData.length )
 
-        // // add new book to the bookdata array
-        // setBookData((prevData) => [...prevData, newBook]);
+        // add new book 
+        dispatch(addBook(newBook));
+        alert('Book successfully added...')
 
-        setBookData(prevData =>{
-            const updated = [newBook, ...prevData ]
-            console.log('after: ', updated.length) // check no of books after adding new book to the state
-            alert('New Book successfully added...')
-            return updated
-        } )
 
         // reset the formData state to empty
         setFormData({
@@ -73,6 +78,7 @@ function AddBook() {
             longDesc: '',
             image: '',
         });
+        navigate('/browsebooks')
     }
 
     return (

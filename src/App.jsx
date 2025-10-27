@@ -5,6 +5,8 @@ import NewBrowseBooks from "./components/NewBrowseBooks"
 
 // import routes
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import NotFound from "./components/NotFound";
+import BookDetails from "./components/BookDetails";
 
 function App(){
 
@@ -18,7 +20,8 @@ function App(){
           <Route path="/" element ={ <HomeBody />} />
           <Route path="/browsebooks" element ={ <NewBrowseBooks />} />
           <Route path="/add_book" element ={ <AddBook />} />
-          {/* <Route path="/" element ={ <HomeBody />} /> */}
+          <Route path="*" element ={ <NotFound />} />
+          <Route path='/book/:id' element={ <BookDetails /> } />
         </Routes>
         
       </div>

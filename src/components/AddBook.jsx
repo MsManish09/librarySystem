@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 // import book data state
-// import useBookData from "../utils/useBookData"
 
 import { useDispatch, useSelector } from 'react-redux'
 import { addBook } from '../redux/bookSlice'
@@ -78,7 +77,12 @@ function AddBook() {
             longDesc: '',
             image: '',
         });
-        navigate('/browsebooks')
+
+        // settimeout used for better ui -> redirects to browsebook cmp after .3sec to view the newly added book.
+        setTimeout(() => {
+            navigate('/browsebooks')
+        }, 300);
+        
     }
 
     return (

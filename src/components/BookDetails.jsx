@@ -3,7 +3,7 @@
 import { Link, useParams } from "react-router-dom";
 
 // import booksdata
-import useBookData from "../utils/useBookData";
+import { useSelector } from 'react-redux';
 import NotFound from "./NotFound";
 
 
@@ -12,10 +12,10 @@ function BookDetails(){
     // get id form url
     const {id} = useParams()
     console.log(id)
-    const { bookData } = useBookData()
+    const bookData = useSelector((state) => state.books.bookData)
 
     // get book based on id and covert the id into integer
-    const book = bookData.find((book) => book.id === parseInt(id));
+    const book = bookData.find((book) => book.id === parseInt(id))
     console.log(book)
 
     // if book id doesnot exist

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import CategoryDisplay from "./CategoryDisplay"
 
 function HomeBody(){
@@ -14,7 +15,10 @@ function HomeBody(){
             </p>
 
             <p className=" italic text-[1.2rem] font-semibold text-white " >”Today a reader, tomorrow a leader.” <span className=" text-yellow-400 " > – Margaret Fuller</span></p>
-            <button className=" p-2 bg-[#3a4ff4] font-semibold hover:scale-95 hover:text-yellow-400 cursor-pointer rounded-[15px] " >📚 Start Exploring →</button>
+
+            <Link to={'/browsebooks'} >
+                <button className=" p-2 bg-[#3a4ff4] font-semibold hover:scale-95 hover:text-yellow-400 cursor-pointer rounded-[15px] " >📚 Start Exploring →</button>
+            </Link>
 
             <CategoryDisplay />
         </div>

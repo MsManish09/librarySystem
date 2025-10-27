@@ -47,7 +47,7 @@ function NewBrowseBooks() {
 
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <div className="p-4 flex flex-col lg:flex-row justify-evenly items-start gap-6">
 
         {/* Popular Books Section */}

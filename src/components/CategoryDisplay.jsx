@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { categories } from '../utils/categoryData'
 
 function CategoryDisplay() {
@@ -12,10 +13,12 @@ function CategoryDisplay() {
                     {
                         categories.map((category, index) => {
                             return (
-                                <div key={index} className='w-[175px] h-[175px] flex-shrink-0 flex relative justify-center items-center '>
-                                    <img src={category.imageUrl} alt="category image" className='w-[150px] h-[150px] object-cover mx-auto ' />
-                                    <p className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 text-center  text-yellow-300 bg-[rgba(0,0,0,0.7)] p-2'>{category.name}</p>
-                                </div>
+                                <Link to={'/browsebooks'} >
+                                    <div key={index} className='w-[175px] h-[175px] flex-shrink-0 flex relative justify-center items-center '>
+                                        <img src={category.imageUrl} alt="category image" className='w-[150px] h-[150px] object-cover mx-auto ' />
+                                        <p className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 text-center  text-yellow-300 bg-[rgba(0,0,0,0.7)] p-2'>{category.name}</p>
+                                    </div>
+                                </Link>
 
                             )
                         })

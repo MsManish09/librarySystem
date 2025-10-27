@@ -1,6 +1,6 @@
 
 // extract id from url
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 // import booksdata
 import useBookData from "../utils/useBookData";
@@ -43,6 +43,8 @@ function BookDetails(){
                         <span className=" font-semibold text-[1.2rem] " >Summary: </span>
                         {book.longDesc}
                     </p>
+
+                    <Link to={'/browsebooks'} > <button className=" p-2 bg-blue-700 text-yellow-400 font-semibold border-2 border-solid border-yellow-400 rounded-[15px] hover:scale-95 " >Browse More</button> </Link>
                 </div>
             </div>
         </div>

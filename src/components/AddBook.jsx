@@ -55,7 +55,7 @@ function AddBook() {
         // setBookData((prevData) => [...prevData, newBook]);
 
         setBookData(prevData =>{
-            const updated = [...prevData, newBook]
+            const updated = [newBook, ...prevData ]
             console.log('after: ', updated.length) // check no of books after adding new book to the state
             alert('New Book successfully added...')
             return updated

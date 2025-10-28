@@ -50,5 +50,18 @@
   - Custom 404 Page: Error page with navigation back to Home.
      <img width="1920" height="1080" alt="Screenshot 2025-10-28 074730" src="https://github.com/user-attachments/assets/19b665d1-741a-4521-adac-8c8273b3d56c" />
 
+## Tech Stack used:
 
+  - React.js - JavaScript library for building dynamic user interfaces.​
+  - Vite - Vite – Modern frontend tool that makes development faster and builds more efficient.​
+  - React Router – Easy-to-use routing tool for smooth navigation and dynamic URLs​
+  - TailwindCSS - Utility-first CSS framework for rapid and responsive UI styling​​
+  - Redux Toolkit - Official library that makes Redux development easier and more efficient with simple setup.
 
+## Credits / Acknowledgments:
+
+  - react-icons.github.io : For icons
+  - Tailwindcss.com: https://tailwindcss.com/
+  - Redux ToolKit: https://redux-toolkit.js.org/
+  - perplexicity AI and chatGPT and other sites :
+    - for research  

@@ -64,5 +64,6 @@
     - For icons
   - Tailwindcss.com: https://tailwindcss.com/
   - Redux ToolKit: https://redux-toolkit.js.org/
+  - React Router: https://reactrouter.com/
   - perplexicity AI and chatGPT and other sites :
     - for research  

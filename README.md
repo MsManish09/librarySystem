@@ -60,7 +60,8 @@
 
 ## Credits / Acknowledgments:
 
-  - react-icons.github.io : For icons
+  - react-icons: https://react-icons.github.io/react-icons/
+    - For icons
   - Tailwindcss.com: https://tailwindcss.com/
   - Redux ToolKit: https://redux-toolkit.js.org/
   - perplexicity AI and chatGPT and other sites :
